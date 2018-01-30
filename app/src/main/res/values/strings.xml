@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AudioHelper</string>
     <string name="click_the_button_biotch">Click the button biotch</string>
+    <string name="Speak_Text">TypeHere</string>
 </resources>
