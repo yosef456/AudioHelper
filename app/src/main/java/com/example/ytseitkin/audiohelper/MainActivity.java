@@ -50,6 +50,9 @@ public class MainActivity extends Activity implements OnInitListener {
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
                 }
+
+
+                onClickOfButton(v);
             }
         });
 
@@ -77,16 +80,16 @@ public class MainActivity extends Activity implements OnInitListener {
             }
 
     }
-//    public void onClick(View view){
-//        Intent checkIntent = new Intent();
-//        TextToSpeech tts= new TextToSpeech(this, (OnInitListener) this);
-//        EditText editText = (EditText) findViewById(R.id.editText2);
-//        String toSpeak = editText.toString();
-//        checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
-//        tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-//
-//        startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
-//    }
+    public void onClickOfButton(View view){
+        Intent checkIntent = new Intent();
+        TextToSpeech tts= new TextToSpeech(this, (OnInitListener) this);
+        EditText editText = (EditText) findViewById(R.id.editText2);
+        String toSpeak = editText.toString();
+        checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+
+        startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
+    }
 
 
     @Override
